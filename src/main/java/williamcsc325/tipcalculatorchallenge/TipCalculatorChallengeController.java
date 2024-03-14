@@ -9,8 +9,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
-import javafx.scene.input.InputMethodEvent;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 
 public class TipCalculatorChallengeController {
     @FXML
@@ -56,7 +56,7 @@ public class TipCalculatorChallengeController {
     }
 
     @FXML
-    private void calculateSlider(InputMethodEvent event) {
+    private void calculateSlider(MouseEvent event) {
         try {
             BigDecimal amount = new BigDecimal(amountTextField.getText());
             BigDecimal tip = amount.multiply(tipPercentage);

@@ -27,11 +27,11 @@
             </rowConstraints>
             <children>
                 <Label text="Amount" />
-                <Label fx:id="tipPercentageLabel" text="15%" GridPane.rowIndex="1" />
+                <Label fx:id="tipPercentageLabel" onInputMethodTextChanged="#calculateField" text="15%" GridPane.rowIndex="1" />
                 <Label text="Tip" GridPane.rowIndex="2" />
                 <Label text="Total" GridPane.rowIndex="3" />
                 <TextField fx:id="amountTextField" onKeyTyped="#calculateField" GridPane.columnIndex="1" />
-                <Slider fx:id="tipPercentageSlider" blockIncrement="5.0" max="30.0" onInputMethodTextChanged="#calculateSlider" value="15.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Slider fx:id="tipPercentageSlider" blockIncrement="5.0" max="30.0" onMouseReleased="#calculateSlider" value="15.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                 <TextField fx:id="tipTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                 <TextField fx:id="totalTextField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             </children>
